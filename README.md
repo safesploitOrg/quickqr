@@ -1,4 +1,4 @@
-# QuickQR
+# QuickQR
 
 A fast and customizable QR code generator built with client-side JavaScript. Provides real-time QR code creation with options for size, color, and download capability.
 
