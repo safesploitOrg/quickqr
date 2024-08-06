@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  #qrcode {
+    width: 120px; /* Set a fixed width */
+    height: 120px; /* Set a fixed height */
+    margin: 15px auto; /* Center the QR code container */
+    padding: 10px; /* Add padding around the QR code */
+    background-color: #fff; /* White background for the QR code container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    display: flex; /* Center the QR code inside */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  #qrcode.hidden {
+    visibility: hidden; /* Use visibility instead of display to keep the size */
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+    display: none; /* Initially hidden */
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    padding: 20px; /* Add some padding to avoid touching screen edges */
+    box-sizing: border-box;
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Ensure the image doesn't overflow the modal */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

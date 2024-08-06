@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickQR - QR Code Generator</title>
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <link rel="icon" href="assets/image/favicon/qrcode.png" type="image/png">
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/qrcode.min.js"></script>
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>QuickQR - QR Code Generator</h1>
+    <input id="text" type="text" placeholder="Enter text or URL" style="width:80%" />
+    <br />
+    <label for="size">Size:</label>
+    <input id="size" type="number" value="100" min="50" max="500" />
+    <br />
+    <label for="colorDark">Dark Color:</label>
+    <input id="colorDark" type="color" value="#000000" />
+    <br />
+    <label for="colorLight">Light Color:</label>
+    <input id="colorLight" type="color" value="#ffffff" />
+    <br />
+    <div id="qrcode" class="hidden"></div>
+    <div class="button-container">
+      <button id="saveBtn">Save QR Code</button>
+    </div>
+  </div>
+
+  <!-- Modal for enlarged QR code -->
+  <div id="qrModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="qrModalImg">
+  </div>
+</body>
+</html>
