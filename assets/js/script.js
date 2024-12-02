@@ -34,7 +34,8 @@ $(document).ready(function() {
       text: elText.value.trim(),
       size: size,
       colorDark: colorDark,
-      colorLight: colorLight
+      colorLight: colorLight,
+      useSVG: true,
     };
   }
 

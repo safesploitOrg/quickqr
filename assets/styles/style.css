@@ -1,96 +1,146 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-  }
-  
-  .container {
-    text-align: center;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  #qrcode {
-    width: 120px; /* Set a fixed width */
-    height: 120px; /* Set a fixed height */
-    margin: 15px auto; /* Center the QR code container */
-    padding: 10px; /* Add padding around the QR code */
-    background-color: #fff; /* White background for the QR code container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    display: flex; /* Center the QR code inside */
-    justify-content: center;
-    align-items: center;
-    cursor: pointer; /* Change cursor to pointer */
-  }
-  
-  #qrcode.hidden {
-    visibility: hidden; /* Use visibility instead of display to keep the size */
-  }
-  
-  .button-container {
-    margin-top: 20px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    transition: background-color 0.3s ease;
-    display: none; /* Initially hidden */
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Modal Styles */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    padding: 20px; /* Add some padding to avoid touching screen edges */
-    box-sizing: border-box;
-  }
-  
-  .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 90%; /* Ensure the image doesn't overflow the modal */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.main-header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.qr-inputs label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.qr-inputs input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.qr-code-container {
+  width: 120px;
+  height: 120px;
+  margin: 15px auto;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code-container.hidden {
+  visibility: hidden;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+  display: none;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  height: auto;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Footer */
+.main-footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+}
+
+.main-footer a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.main-footer a:hover {
+  text-decoration: underline;
+}
